@@ -1,0 +1,12 @@
+<a [style.backgroundImage]="'url('+ cardImageUrl+card.idName+'.png' +')'"
+  class="item-content h-100"
+  routerLink="{{cardItemUrl+card.idName}}">
+  <span class="card-cost text-white position-absolute font-weight-bold">{{card.elixirCost}}</span>
+
+  <span class="card-level text-white position-absolute font-weight-bold text-center m-auto w-100">Level
+    <ng-container *ngIf="card.rarity === 'Common'"> 1 </ng-container>
+    <ng-container *ngIf="card.rarity === 'Rare'"> 3 </ng-container>
+    <ng-container *ngIf="card.rarity === 'Epic'"> 6 </ng-container>
+    <ng-container *ngIf="card.rarity === 'Legendary'"> 9 </ng-container>
+  </span>
+</a><!-- End Item Content -->

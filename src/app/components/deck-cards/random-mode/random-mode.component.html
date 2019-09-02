@@ -1,0 +1,18 @@
+<section class="container py-5 random-content">
+  <div class="row pt-md-3">
+    <div class="col-xl-3 col-lg-4 col-md-6 col-6 d-flex justify-content-center mb-sm-5 mb-2 px-md-0 item"
+      *ngFor="let card of randomCards; let i = index">
+
+      <app-card-design [card]="card" class="w-100 d-flex justify-content-center"></app-card-design>
+
+    </div><!--End Col -->
+
+    <app-card-statistics [cardsList]="randomCards" class="col-sm-11 col-12 m-auto"></app-card-statistics>
+
+    <div class="col-12 text-center mt-5">
+      <button class="btn generate" type="button" (click)="generateRandom()" > {{generateText}}</button>
+    </div>
+  </div><!--End Row -->
+
+</section><!--End Container Section -->
+

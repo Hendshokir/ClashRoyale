@@ -1,0 +1,24 @@
+<div class="media py-5 m-auto">
+  <img [src]="cardImageUrl+cardItem.idName+'.png'" class="mr-lg-5 mx-md-3" alt="Card Image">
+  <div class="media-body">
+    <h3 class="font-weight-bold text-uppercase my-3">{{cardItem.idName}}</h3>
+    <p class="text-muted">{{cardItem.description}}</p>
+
+    <section class="justify-content-between align-items-center d-flex">
+      <ul class="p-0 list-unstyled">
+        <li><span class="label">Type: </span> {{cardItem.type}}</li>
+        <li><span class="label">Rarity:</span> {{cardItem.rarity}}</li>
+        <li><span class="label">Level:</span>
+          <ng-container *ngIf="cardItem.rarity === 'Common'"> 1 </ng-container>
+          <ng-container *ngIf="cardItem.rarity === 'Rare'"> 3 </ng-container>
+          <ng-container *ngIf="cardItem.rarity === 'Epic'"> 6 </ng-container>
+          <ng-container *ngIf="cardItem.rarity === 'Legendary'"> 9 </ng-container>
+        </li>
+        <li><span class="label">Elixir Cost:</span> {{cardItem.elixirCost}}</li>
+      </ul>
+      <a [href]="cardUrl+cardItem.idName" target="blank" >
+        <i class="fa fa-share-alt share font-weight-bold" aria-hidden="true"></i>
+      </a>
+    </section>
+  </div>
+</div>

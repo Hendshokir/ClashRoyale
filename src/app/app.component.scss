@@ -1,0 +1,52 @@
+@import "node_modules/bootstrap/scss/functions.scss";
+@import 'node_modules/bootstrap/scss/variables.scss';
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss';
+
+
+// app vars
+$main-color: #488bf4;
+$black-color:  #000;
+$gray-color: #e1e2eb;
+$gold-color: #dd8a3b;
+
+
+body,
+html,
+.main-content {
+  overflow-x: hidden;
+}
+
+body,
+html,
+*:not(i) {
+  font-family: 'Roboto Slab', serif;
+}
+
+.main-content {
+  min-height: 500px;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+
+  :host(app-random-mode),
+  :host(app-select-mode) {
+    width: 100%;
+  }
+
+  .sidebar {
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+
+
+}
+
+.main-btn {
+  background-color: $gold-color;
+
+  &:focus {
+    box-shadow: none;
+  }
+}

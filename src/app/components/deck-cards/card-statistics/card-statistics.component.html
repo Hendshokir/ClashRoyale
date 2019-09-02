@@ -1,0 +1,30 @@
+<section>
+  <h4 class="font-weight-bold mb-4">{{title}}</h4>
+
+  <h6>Average Elixir Cost</h6>
+  <div class="progress mb-3">
+    <div class="progress-bar" role="progressbar" [style.width]="average*10+'%'" [attr.aria-valuenow]="average" aria-valuemin="0" attr.aria-valuemax="10">{{average}}</div>
+  </div><!-- Average -->
+
+  <h6>Minimun Cycle Cost <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+  </h6>
+  <div class="progress mb-3">
+    <div class="progress-bar" role="progressbar" [style.width]="minCycle*2+'%'" [attr.aria-valuenow]="minCycle" aria-valuemin="0" attr.aria-valuemax="50">{{minCycle}}</div>
+  </div><!-- Min Cycle Cost -->
+
+  <h6>Card Types</h6>
+  <div class="progress mb-3">
+    <div class="progress-bar" role="progressbar" [style.width]="typeTroop*13+'%'" [attr.aria-valuenow]="typeTroop" aria-valuemin="0" aria-valuemax="8">{{typeTroop}}. Troops</div>
+    <div class="progress-bar bg-success" role="progressbar" [style.width]="typeSpell*13+'%'" [attr.aria-valuenow]="typeSpell" aria-valuemin="0" aria-valuemax="8">{{typeSpell}}. Spell</div>
+    <div class="progress-bar bg-danger" role="progressbar" [style.width]="typeBuilding*13+'%'" [attr.aria-valuenow]="typeBuilding" aria-valuemin="0" aria-valuemax="8">{{typeBuilding}}. Building</div>
+  </div><!-- Card Types -->
+
+  <h6>Card rarity</h6>
+  <div class="progress mb-3">
+    <div class="progress-bar" role="progressbar" [style.width]="rarityCommon*15+'%'" [attr.aria-valuenow]="rarityCommon" aria-valuemin="0" aria-valuemax="8">{{rarityCommon}}. Common</div>
+    <div class="progress-bar bg-success" role="progressbar" [style.width]="rarityRare*15+'%'" [attr.aria-valuenow]="rarityRare" aria-valuemin="0" aria-valuemax="8">{{rarityRare}}. Rare</div>
+    <div class="progress-bar bg-danger" role="progressbar" [style.width]="rarityEpic*15+'%'" [attr.aria-valuenow]="rarityEpic" aria-valuemin="0" aria-valuemax="8">{{rarityEpic}}. Epic</div>
+    <div class="progress-bar bg-warning" role="progressbar" [style.width]="rarityLegendary*15+'%'" [attr.aria-valuenow]="rarityLegendary" aria-valuemin="0" aria-valuemax="8">{{rarityLegendary}}. Legendary</div>
+
+  </div><!-- Card Rarity -->
+</section>

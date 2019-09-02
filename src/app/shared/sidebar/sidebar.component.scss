@@ -1,0 +1,23 @@
+@import  '../../app.component.scss';
+
+aside {
+  background-color: $gray-color;
+  min-width: 200px;
+
+  .navbar-nav {
+    @include media-breakpoint-down(sm) {
+      justify-content: space-around;
+      flex-direction: row;
+    }
+
+    .nav-link {
+      &.active {
+        color: $gold-color;
+      }
+
+      i {
+        color: $gold-color;
+      }
+    }
+  }
+}

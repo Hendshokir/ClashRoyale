@@ -1,0 +1,23 @@
+@import '../../app.component.scss';
+
+footer.app-footer {
+  background-color: $black-color;
+  font-family: 'Roboto Slab', serif;
+  height: 70px;
+
+  @include media-breakpoint-down(sm) {
+    height: 100px;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .download {
+    img {
+      width: 150px;
+
+      @include media-breakpoint-down(sm) {
+        width: 100px;
+      }
+    }
+  }
+}

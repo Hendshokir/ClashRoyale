@@ -1,0 +1,41 @@
+@import  '../../../app.component.scss';
+
+button.select {
+  @extend .main-btn;
+
+  white-space: pre;
+}
+
+.nav-link {
+  border: 0;
+  border-bottom: 1px solid #dee2e6;
+
+  &.active {
+    color: #495057;
+    background-color: transparent;
+    border-bottom: 1px solid $main-color;
+    color: $gold-color;
+  }
+}
+
+h3 {
+  color: $main-color;
+}
+
+.item {
+  height: 250px;
+
+  @include media-breakpoint-down(xs) {
+    height: 200px;
+  }
+
+  button.btn-select {
+    right: 10px;
+    bottom: 0;
+    color: $gold-color;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
